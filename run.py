@@ -19,7 +19,7 @@ def progressbar(it, prefix="", size=60, out=sys.stdout):
     count = len(it)
     def show(j):
         x = int(size*j/count)
-        print(f"{prefix}[{u'█'*x}{('.'*(size-x))}] {j}/{count}", end='\r', file=out, flush=True)
+        print(f"{prefix}[{u'◼'*x}{('.'*(size-x))}] {j}/{count}", end='\r', file=out, flush=True)
     show(0)
     for i, item in enumerate(it):
         yield item
